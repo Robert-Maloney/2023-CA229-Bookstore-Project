@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} All Books {% endblock %}
+{% block content %}
+    <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin: 2rem;">
+        <div class="card-body">
+            <h1 style="text-align: center;" style="margin-top: 20px;">All Books</h1>
+            {% for book in allbooks %}
+            <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: 18rem; margin: 2rem; display: inline-block">
+                <a class="close" href="{% url 'delete' book.id %}">&times;</a>
+                <div class="card-body">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ book.author }}</h6>
+                    <a href="#" class="card-link"></a>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Year Published: {{ book.year }}</li>
+                        <li class="list-group-item">Price: €{{ book.price }}</li>
+                    </ul>
+                    <a href="{% url 'singlebook' book.id %}" class="btn btn-primary" style="margin-top: 10px;">More Info on {{ book.title }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
