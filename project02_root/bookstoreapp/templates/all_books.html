@@ -6,7 +6,7 @@
             <h1 style="text-align: center;" style="margin-top: 20px;">All Books</h1>
             {% for book in allbooks %}
             <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: 18rem; margin: 2rem; display: inline-block">
-                <a class="close" href="{% url 'delete' book.id %}">&times;</a>
+
                 <div class="card-body">
                     <h5 class="card-title">{{ book.title }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ book.author }}</h6>

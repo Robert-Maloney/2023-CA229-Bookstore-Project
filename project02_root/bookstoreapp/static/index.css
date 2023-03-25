@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+}
+
+#bgfix {
+    min-width: auto;
+    height: 100%; 
+
+    overflow-x: hidden;
+
+    background-image: url("/food_banner.jpg");
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
+#main {
+    width: 1116px;
+
+    position: relative;
+    margin: 0 auto;
+}
+
+#leftbg {
+    position: absolute;
+    width: 100px;
+    background-image: url("/food_banner.jpg");;
+
+    left: 100px;
+}
+
+#rightbg {
+    position: absolute;
+    width: 100px;
+    background-image: url("/food_banner.jpg");
+
+    /* same as leftbg */
+    right: 100px
+}

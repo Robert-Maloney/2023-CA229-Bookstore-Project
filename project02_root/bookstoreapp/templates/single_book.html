@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
-
-{% block title %} <h3>{{ book.title}}</h3> {%endblock %}
+{% block title %} {{ book.title}} {% endblock %}
 {% block content %}
-<p>{{ book.year }} {{ book.author }}</p>
-<p>{{ book.synopsis }}</p>
-
+    <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin: 2rem;">
+        <div class="card-body">
+            <h1 style="text-align: left;" style="margin-top: 20px;">{{ book.title }}</h1>
+            <h4 style="text-align: left;" style="margin-top: 20px;">Author: {{ book.author_fname }}  {{ book.author_lname }} </h4>
+                    <h5 class="card-title">{{ book.author }} | {{ book.category }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ book.year }}</h6>
+                    <p class="card-text" style="font-size: 1.6rem;">{{ book.synopsis }}</p>
+                    <a href="#" class="card-link"></a>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" style="font-size: 1.3rem;">Year Published: {{ book.release_year }}</li>
+                        <li class="list-group-item" style="font-size: 1.3rem;">Price: €{{ book.price }}</li>
+                    </ul>
+                    <a href="{% url 'index' %}" class="btn btn-primary" style="margin-top: 10px;" >Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
