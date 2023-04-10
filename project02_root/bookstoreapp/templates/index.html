@@ -1,23 +1,27 @@
 {% extends 'base.html' %}
 {% block title %} Home {% endblock %}
 {% load static %} 
-{% block content %}
 
 
 <link rel="stylesheet" href="{% static '../static/index.css' %}">
+{% block content %}
+
+<body>
+  <div class="container">
 
 
 <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin: 2rem;">
-    <img src="../static/food_banner.png" class="card-img-top" alt="foods">
-    <h1 style="text-align: center;" style="margin-top: 20px; margin-bottom: 20px;"><br>Welcome the Dublin Cook Book Emporium!!</h1>
-    <br>
-    <h4 style="text-align: center; margin-top: 20px; margin-left: 15%; margin-right: 15%;"  >We are home to Dublins largest range of books relating to drink, food and travel! Our goal is to connect our readers with
-        other food fanatic. We want to inspire thought and discussion around Irish food, our food culture, our scenic landscapes,
-        our green island and its rich fertile soil that has influenced our people and way of life, but most of all we want to share the pure joy of Irish food. </h4>
+  <img src="../static/food_banner.png" class="card-img-top" alt="foods">
+  <h1 style="text-align: center;" style="margin-top: 20px; margin-bottom: 20px;"><br>Welcome the Dublin Cook Book Emporium!!</h1>
+  <br>
+  <h4 style="text-align: center; margin-top: 20px; margin-left: 15%; margin-right: 15%;"  >We are home to Dublins largest range of books relating to drink, food and travel! Our goal is to connect our readers with
+      other food fanatic. We want to inspire thought and discussion around Irish food, our food culture, our scenic landscapes,
+      our green island and its rich fertile soil that has influenced our people and way of life, but most of all we want to share the pure joy of Irish food. </h4>
 </div>
 
-<div class="row row-cols-1 row-cols-md-2 g-4" style="margin-left: 10%; margin-right: 10%;">
-    <div class="col">
+
+  <div class="row">
+    <div class="col-sm-6">
       <div class="card">
         <img src="../static/books.png" class="card-img-top" alt="books" style="height: 100%px; width: 100%;">
         <div class="card-body">
@@ -26,32 +30,40 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-sm-6">
       <div class="card">
-        <img src="../static/book_n_quill.jpg" class="card-img-top" alt="book and quill" style="height: 290px; width: 710px; align-self: auto;" >
+        <img src="../static/book_n_quill.jpg" class="card-img-top" alt="book and quill" style="height: 20%; width: 100%; align-self: auto;" >
         <div class="card-body">
           <h5 class="card-title">Contact Us</h5>
           <p class="card-text">Have anything you want to let us know? Message us here!</p>
         </div>
       </div>
     </div>
-    <div class="col">
+  </div>
+ <br>
+  <div class="row">
+    <div class="col-sm-6">
       <div class="card">
-        <img src="../static/cocktail-books.png" class="card-img-top" alt="cocktail books" style="height: 100%px; width: 100%;">
+        <img src="../static/cocktail-books.png" class="card-img-top" alt="cocktail books" style="height: 100%; width: 100%;">
         <div class="card-body">
           <h5 class="card-title">Drink Books</h5>
           <p class="card-text">Check out our range of cocktail and drink related books</p>
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-sm-6">
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="../static/polls.jpg" class="card-img-top" alt="Poll Box" style="height: 100%; width: 100%;">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">Polls</h5>
+          <p class="card-text">Take a look at some polls! </p>
         </div>
       </div>
     </div>
   </div>
+</div>
+</body>
   {% endblock %}
+
+
+

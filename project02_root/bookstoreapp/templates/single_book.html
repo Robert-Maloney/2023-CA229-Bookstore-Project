@@ -1,21 +1,33 @@
 {% extends 'base.html' %}
 {% block title %} {{ book.title}} {% endblock %}
 {% block content %}
-    <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin: 2rem;">
+
+<body>
+    <div class="container">
+  
+
+
+    <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin-top: 2rem;margin-left: 8rem; margin-right: 8rem; ">
         <div class="card-body">
             <h1 style="text-align: left;" style="margin-top: 20px;">{{ book.title }}</h1>
             <h4 style="text-align: left;" style="margin-top: 20px;">Author: {{ book.author_fname }}  {{ book.author_lname }} </h4>
-                    <h5 class="card-title">{{ book.author }} | {{ book.category }}</h5>
+                    <h5 class="card-title">Category: {{ book.category }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ book.year }}</h6>
-                    <p class="card-text" style="font-size: 1.6rem;">{{ book.synopsis }}</p>
-                    <a href="#" class="card-link"></a>
+                    <br>
+                    <p class="card-text" style="font-size: 1.3rem;">{{ book.synopsis }}</p>
+
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" style="font-size: 1.3rem;">Year Published: {{ book.release_year }}</li>
                         <li class="list-group-item" style="font-size: 1.3rem;">Price: €{{ book.price }}</li>
                     </ul>
-                    <a href="{% url 'index' %}" class="btn btn-primary" style="margin-top: 10px;" >Back to Home</a>
+                    <a href="{% url 'index' %}" class="btn btn-primary" style="margin-top: 10px; text-align: center;" >Back to Home</a>
+                    <a href="{% url 'allbooks' %}" class="btn btn-primary" style="margin-top: 10px; text-align: center;" >Back to Booklist</a>
                 </div>
             </div>
+
         </div>
-    </div>
+    </body>
+
 {% endblock %}
+
+
