@@ -7,15 +7,22 @@ html, body {
     height: 100%; 
 
     overflow-x: hidden;
-
     background-image: url("/food_banner.jpg");
     background-position: center;
     background-repeat: repeat-y;
 }
 
+.container {
+    min-height: 100vh; /* sets the container height to at least the height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
 #main {
     width: 1116px;
-
     position: relative;
     margin: 0 auto;
 }
