@@ -43,3 +43,129 @@ html, body {
     /* same as leftbg */
     right: 100px
 }
+
+
+/*CONTACT PAGE*/
+
+#contact {
+	background: #F4F7F7;
+	max-width: 100%;
+
+}
+
+#contact .container {
+	display: flex;
+	flex-direction: row;
+	padding: 5em 0em;
+}
+
+.contact-h1 {
+	padding-bottom: 42px;
+}
+
+.contact-form {
+	flex: 50%;
+	padding-left: 3em;
+	margin-right: 30px;
+}
+
+.contact-form input, textarea {
+	background: #F4F7F7;
+	border: none;
+	padding: 1em;
+	font-size: 1em;
+	color: #717979;
+	margin-top: 20px;
+	background-color: #f4f7f7;
+	border-radius: 6px;
+}
+
+.contact-form .button {
+	margin-top: 2em;
+	display: block;
+	border-radius: 6px;
+	color: #482813;
+}
+
+.contact-text {
+	flex: 50%;
+	color: #482813;
+	margin-left: 50px;
+	margin-top: 25px;
+}
+
+.contact-text h1 {
+	font-weight: bolder;
+	font-size: 1.75em;
+	margin-bottom: -10px;
+}
+
+.contact-text p {
+	margin-bottom: 20px;
+}
+
+.contact-text img {
+	margin: auto;
+	max-width: 100%;
+}￼
+
+.contact-form form {
+	display: flex;
+}
+
+form {
+	background-color: #fff;
+	padding: 2.5em;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.contact-form h1 {
+	margin-left: 10px;
+	text-align: center;
+	font-size: 30px;
+	color: #c5cd96;
+}
+
+.contact-form h2 {
+	font-weight: normal;
+	font-size: 1em;
+	margin-top: 1.5em;
+	margin-bottom: .5em;
+}
+
+.contact-form select {
+	background: #F4F7F7;
+	border: none;
+	padding: 1em;
+	font-size: 1em;
+	color: #717979;
+}
+
+.contact-form th {
+	padding-right: 25px
+}
+
+.button {
+	display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+  
+}
+
+.button:hover {
+	cursor: pointer;
+	transition: 0.4s;
+	background-color: #c5cd96;
+	color: #482813;
+}
+
+input .button {
+	color: aqua;
+}
+
+label {
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}

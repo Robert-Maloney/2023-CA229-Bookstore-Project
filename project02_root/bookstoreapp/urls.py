@@ -7,7 +7,10 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('books', views.view_all_books, name='allbooks'),
     path('books/<int:id>', views.single_book, name='singlebook'),
-    path('books/<str:book_category>', views.books_by_category, name='booksbycategory'),
+    path('books/category/<str:book_category>', views.books_by_category, name='booksbycategory'),
+    path('books/category', views.category, name='category'),
+    path('contact/', views.contact, name='contact'),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()

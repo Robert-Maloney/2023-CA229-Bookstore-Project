@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Polls {% endblock %}
+
+{% load static %} 
+
+
+<link rel="stylesheet" href="{% static '../static/index.css' %}">
+{% block content %}
+<div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin: 2rem;">
+  <h1 style="text-align: center;" style="margin-top: 20px; margin-bottom: 20px;"><br>Welcome to my Polls page!</h1>
+  <br>
+  <h4 style="text-align: center; margin-top: 20px; margin-left: 15%; margin-right: 15%;"> </h4>
+</div>
+
+
+
+  {% for question in latest_question_list %}
+  <div class="card text-center" style="margin-left: 10%; margin-right: 10%;">
+    <div class="card-body">
+      <h5 class="card-title">{{question.question_text}}</h5>
+      <a href="/quiz/{{ question.id }}/" class="btn btn-primary">Go to this poll!</a>
+    </div>
+  </div>
+  <br>
+  {% endfor %}
+  
+        {% endblock %}
+
+
+        
