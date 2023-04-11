@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% block title %} Poll Result {% endblock %}
+
+{% load static %} 
+
+<link rel="stylesheet" href="{% static '../static/index.css' %}">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+{% block content %}
+
+<h1 style="margin-top: 5%; margin-left: 5%;">{{ question.question_text }}</h1>
+
+<ul style="margin-left: 8% ;">
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+<br><br><br>
+<a href="{% url 'quiz:detail' question.id %}" style="margin-left: 8% ;">Vote again?</a>
+<a href="{% url 'quiz:quiz_index' %}" style="margin-left: 8% ;"> Back to Home</a>
+<br><br><br>
+{% endblock %}

@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 {% block title %} All Books {% endblock %}
 {% block content %}
+
+<div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin: 2rem;">
+    <div class="card-body">
+        <h1 style="text-align: center;" style="margin-top: 20px;"><a href="{% url 'category' %}">Want to sort by Category?</a></h1>
+    </div>
+</div>
+
     <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin: 2rem;">
         <div class="card-body">
             <h1 style="text-align: center;" style="margin-top: 20px;">All Books</h1>
+            <br>
             {% for book in allbooks %}
 
 
@@ -24,12 +32,6 @@
         </div>
     </div>
 
-    <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="margin: 2rem;">
-        <div class="card-body">
-            <h1 style="text-align: center;" style="margin-top: 20px;">Sort by Category</h1>
-            {% for category in categories %}
-            <a href="{% url 'booksbycategory' category %}" class="btn btn-primary btn-large" style="margin-right: 1rem;">{{ category }}</a>
-            {% endfor %}
-        </div>
-    </div>
+
+
 {% endblock %}

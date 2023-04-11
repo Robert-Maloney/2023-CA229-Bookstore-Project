@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+}
+
+ul {
+float:left;
+margin:0 5px;
+}
+
+#bgfix {
+    min-width: auto;
+    height: 100%; 
+
+    overflow-x: hidden;
+
+    background-image: url("/food_banner.jpg");
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
+#main {
+    width: 1116px;
+    position: relative;
+    margin: 0 auto;
+}
