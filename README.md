@@ -9,7 +9,7 @@ https://trello.com/b/kwQgi5jF/robert-maloney-ca229-project02
 
 
 ## Description
-My project is based on books, speciffically relating to food and drinks.
+My project is based on books, specifically relating to cookbooks!.
 
 
 ## Authors and acknowledgment
