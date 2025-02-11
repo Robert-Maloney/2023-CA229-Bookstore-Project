@@ -1,4 +1,4 @@
-# 2023 CA229 Project02
+# 2023 CA229
 
 Welcome to Robert Maloney's CA229 Project!
 
